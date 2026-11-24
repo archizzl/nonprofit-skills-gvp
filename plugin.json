@@ -1,0 +1,11 @@
+{
+  "$schema": "https://antigravity.google/schemas/v1/plugin.json",
+  "name": "nonprofit-skills-gvp",
+  "displayName": "Nonprofit Skills (GVP subset)",
+  "version": "1.0.0",
+  "description": "57 nonprofit skills for advocacy, fundraising, governance, finance, comms, programs and volunteers, selected from sector-skills/nonprofit-skills.",
+  "author": { "name": "archizzl", "url": "https://github.com/archizzl" },
+  "repository": "https://github.com/archizzl/nonprofit-skills-gvp",
+  "license": "MIT",
+  "keywords": ["nonprofit", "advocacy", "fundraising", "governance"]
+}
