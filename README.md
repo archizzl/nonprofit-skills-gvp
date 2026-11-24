@@ -1,46 +1,49 @@
 # Nonprofit Skills (GVP subset)
 
-57 agent skills for nonprofit work, selected from
-[sector-skills/nonprofit-skills](https://github.com/sector-skills/nonprofit-skills) (MIT license,
-commit `9a7f196`). Each skill is a folder in `skills/` with one `SKILL.md`. Your agent loads a
-skill automatically when a request matches its description.
+57 skills for Gemini covering nonprofit advocacy, fundraising, governance, finance, communications,
+programs and volunteers. Once you add a skill, Gemini uses it on its own when your request matches,
+or you can pick it by typing `/` in a chat.
 
-The skills are unchanged from the original. They are general nonprofit guidance, not specific to
-gun violence prevention. The housing, arts, faith-based, retail and community-finance collections
-were left out, so a few skills mention sibling skills that aren't here.
+Selected from [sector-skills/nonprofit-skills](https://github.com/sector-skills/nonprofit-skills)
+(MIT license, commit `9a7f196`) and unchanged from the original. They are general nonprofit
+guidance, not specific to gun violence prevention.
 
-## Install
+## Add skills to Gemini
 
-### Easiest: ask your agent
-Paste this into Gemini / Antigravity:
+Gemini adds skills one at a time, so start with the ones you'll actually use (see the starter set
+below).
 
-> Install the agent skills from https://github.com/archizzl/nonprofit-skills-gvp. Clone the repo and
-> copy every folder inside its `skills/` directory into my global skills folder
-> (`~/.gemini/config/skills/` for Antigravity, `~/.gemini/skills/` for Gemini CLI or Antigravity
-> CLI). Then confirm the skills are listed.
+1. **Download this repo once.** Click the green **Code** button at the top of this page, then
+   **Download ZIP**, and unzip it. Each skill is a folder inside `skills/`.
+2. **Open Gemini** at [gemini.google.com](https://gemini.google.com) and click **Customize** in
+   the left sidebar, then the **Skills** tab.
+3. Click **Create**, then **Upload**.
+4. Select the `SKILL.md` file inside the skill's folder (for example
+   `skills/nonprofit-grant-writing/SKILL.md`).
+5. Click **Upload** (skip the optional extra files), check that the name and description filled
+   in, then click **Create**. You'll see "Skill created" and the skill under **Installed**.
 
-### One command (Mac with the Gemini app)
-Run this in Terminal:
-```bash
-/Applications/Gemini.app/Contents/Helpers/agy plugin install https://github.com/archizzl/nonprofit-skills-gvp
-```
-The `agy` tool ships inside the Gemini app but usually isn't on your PATH, so plain `agy` gives
-"command not found"; use the full path above. Check the install with:
-```bash
-/Applications/Gemini.app/Contents/Helpers/agy plugin list
-```
-You should see `nonprofit-skills-gvp (enabled, 1.0.0)` with 57 skills. Quit and reopen Gemini /
-Antigravity if it was open.
+Repeat steps 3–5 for each skill you want. You can have up to 100 active skills. To remove one, use
+the **⋯** menu next to it on the Skills page.
 
-### Manual
-```bash
-git clone https://github.com/archizzl/nonprofit-skills-gvp.git
-mkdir -p ~/.gemini/config/skills
-cp -R nonprofit-skills-gvp/skills/* ~/.gemini/config/skills/
-```
-For Gemini CLI, copy to `~/.gemini/skills/` instead. For Claude Code, copy to `~/.claude/skills/`.
+## Starter set
 
-## Skills
+The 10 most useful for advocacy work:
+
+| Skill | Use it for |
+|---|---|
+| [nonprofit-grassroots-mobilization](skills/nonprofit-grassroots-mobilization/SKILL.md) | Action alerts, petitions, click-to-call, rapid response |
+| [nonprofit-legislative-advocacy](skills/nonprofit-legislative-advocacy/SKILL.md) | Legislator meetings, lobby days, testimony |
+| [nonprofit-policy-analysis](skills/nonprofit-policy-analysis/SKILL.md) | Issue briefs, bill analysis, position papers |
+| [nonprofit-coalition-building](skills/nonprofit-coalition-building/SKILL.md) | Multi-org coalitions and MOUs |
+| [nonprofit-voter-engagement](skills/nonprofit-voter-engagement/SKILL.md) | Nonpartisan voter registration, GOTV, candidate forums |
+| [nonprofit-c3-c4-structure](skills/nonprofit-c3-c4-structure/SKILL.md) | c3/c4 rules, 501(h) lobbying limits, shared-staff allocation |
+| [nonprofit-media-relations](skills/nonprofit-media-relations/SKILL.md) | Press releases, pitching, spokesperson prep |
+| [nonprofit-storytelling](skills/nonprofit-storytelling/SKILL.md) | Ethical stories, consent and interview protocols |
+| [nonprofit-social-media](skills/nonprofit-social-media/SKILL.md) | Content calendars and platform strategy |
+| [nonprofit-grant-writing](skills/nonprofit-grant-writing/SKILL.md) | LOIs and full grant proposals |
+
+## All skills
 
 Folder names start with `nonprofit-` (for example `nonprofit-grant-writing`).
 
@@ -54,6 +57,14 @@ Folder names start with `nonprofit-` (for example `nonprofit-grant-writing`).
 - **Strategy:** change-management, eos-traction, mergers-fiscal-sponsorship, revenue-diversification, strategic-planning
 - **Technology & Data:** data-privacy, digital-fundraising-tools, donor-crm
 - **Executive Leadership:** ceo-board-partnership, executive-communications, executive-dashboard, executive-search, executive-transitions
+
+The housing, arts, faith-based, retail and community-finance collections from the original library
+were left out, so a few skills mention sibling skills that aren't here.
+
+## Other tools
+
+The same `skills/` folders work in Claude Code (copy them to `~/.claude/skills/`) and other agents
+that read `SKILL.md` files. `plugin.json` lets Antigravity install the whole set as a plugin.
 
 ## License
 
