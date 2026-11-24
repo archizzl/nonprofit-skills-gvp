@@ -19,11 +19,18 @@ Paste this into Gemini / Antigravity:
 > (`~/.gemini/config/skills/` for Antigravity, `~/.gemini/skills/` for Gemini CLI or Antigravity
 > CLI). Then confirm the skills are listed.
 
-### Antigravity CLI (as a plugin)
+### One command (Mac with the Gemini app)
+Run this in Terminal:
 ```bash
-agy plugin install https://github.com/archizzl/nonprofit-skills-gvp
+/Applications/Gemini.app/Contents/Helpers/agy plugin install https://github.com/archizzl/nonprofit-skills-gvp
 ```
-Skills install as `nonprofit-skills-gvp:<skill-name>`. Check with `agy plugin list`.
+The `agy` tool ships inside the Gemini app but usually isn't on your PATH, so plain `agy` gives
+"command not found"; use the full path above. Check the install with:
+```bash
+/Applications/Gemini.app/Contents/Helpers/agy plugin list
+```
+You should see `nonprofit-skills-gvp (enabled, 1.0.0)` with 57 skills. Quit and reopen Gemini /
+Antigravity if it was open.
 
 ### Manual
 ```bash
